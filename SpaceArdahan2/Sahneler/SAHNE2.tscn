@@ -1,0 +1,133 @@
+[gd_scene load_steps=4 format=1]
+
+[ext_resource path="res://Scripts/MENU.gd" type="Script" id=1]
+[ext_resource path="res://fonts/m5x7.fnt" type="BitmapFont" id=2]
+[ext_resource path="res://Sprite/SpaceGameTitle.png" type="Texture" id=3]
+
+[node name="Sprite" type="Sprite"]
+
+transform/pos = Vector2( 490, 301.489 )
+transform/scale = Vector2( 0.959507, 0.895365 )
+
+[node name="MENU" type="MenuButton" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -367.0
+margin/top = -81.0
+margin/right = -269.0
+margin/bottom = 261.0
+toggle_mode = false
+click_on_press = true
+enabled_focus_mode = 0
+shortcut = null
+flat = true
+items = [  ]
+script/script = ExtResource( 1 )
+
+[node name="YENI OYUN " type="Button" parent="MENU"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -7.0
+margin/top = 13.0
+margin/right = 662.0
+margin/bottom = 177.0
+custom_fonts/font = ExtResource( 2 )
+custom_constants/hseparation = 0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "YENI OYUN"
+flat = false
+
+[node name="ÇIKIS" type="Button" parent="MENU"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 185.0
+margin/top = 200.0
+margin/right = 476.0
+margin/bottom = 326.0
+custom_fonts/font = ExtResource( 2 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "ÇIKIS"
+flat = false
+
+[node name="ONAY" type="ConfirmationDialog" parent="MENU"]
+
+visibility/visible = false
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 239.0
+margin/top = 226.0
+margin/right = 513.0
+margin/bottom = 284.0
+popup/exclusive = false
+window/title = "Lütfen Doğrulayın..."
+dialog/text = "YEMIN ET ÇIKCAN MI?"
+dialog/hide_on_ok = true
+
+[node name="Label" type="Label" parent="."]
+
+rect/scale = Vector2( 1.5, 1.5 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 21.0
+margin/top = 334.0
+margin/right = 102.0
+margin/bottom = 347.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 0.984375, 0, 1 )
+text = "Ademcan Öztürk"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label1" type="Label" parent="."]
+
+rect/scale = Vector2( 1.5, 1.5 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 67.0
+margin/top = -98.0
+margin/right = 154.0
+margin/bottom = -80.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "by A-Dos Gaming"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Sprite" type="Sprite" parent="."]
+
+transform/pos = Vector2( -57.5266, -206.649 )
+transform/scale = Vector2( 0.968491, 1.13641 )
+texture = ExtResource( 3 )
+
+[connection signal="pressed" from="MENU/YENI OYUN " to="MENU" method="_on_YENI_OYUN__pressed"]
+
+[connection signal="pressed" from="MENU/ÇIKIS" to="MENU" method="_on_IKIS_pressed"]
+
+[connection signal="confirmed" from="MENU/ONAY" to="MENU" method="_on_ONAY_confirmed"]
+
+

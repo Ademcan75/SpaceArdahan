@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://Scene/enemy.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Sahneler/a10000.tex" type="Texture" id=2]
+
+[node name="enemy" instance=ExtResource( 1 )]
+
+armor = 5
+
+[node name="enemysp" parent="."]
+
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" parent="."]
+
+transform/pos = Vector2( 3.25, 0 )
+transform/scale = Vector2( 0.442982, 0.4 )
+
+

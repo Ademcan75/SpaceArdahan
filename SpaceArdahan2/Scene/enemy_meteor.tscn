@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://Scene/enemy.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Sprite/a10000.png" type="Texture" id=2]
+
+[node name="enemy" instance=ExtResource( 1 )]
+
+transform/pos = Vector2( -5.87431, 0 )
+transform/scale = Vector2( 0.816428, 1 )
+armor = 3
+velocity = Vector2( 0, 365 )
+
+[node name="enemysp" parent="."]
+
+transform/scale = Vector2( 1.04425, 1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" parent="."]
+
+transform/scale = Vector2( 0.068201, 0.110131 )
+
+

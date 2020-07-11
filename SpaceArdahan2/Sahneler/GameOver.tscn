@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://fonts/m5x7.fnt" type="BitmapFont" id=1]
+
+[node name="Node" type="Node"]
+
+[node name="Sprite" type="Sprite" parent="."]
+
+transform/pos = Vector2( 533.188, 307.377 )
+
+[node name="Label" type="Label" parent="."]
+
+rect/scale = Vector2( 3, 3 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 84.0
+margin/top = 52.0
+margin/right = 143.0
+margin/bottom = 61.0
+custom_fonts/font = ExtResource( 1 )
+text = "OYUN BITTI"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+
